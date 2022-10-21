@@ -12,7 +12,7 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
 html {
-    font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto Slab', serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -48,10 +48,6 @@ video {
 audio:not([controls]) {
   display: none;
   height: 0;
-}
-
-.custom{
-  width: 50em,!important;
 }
 
 [hidden],
@@ -148,12 +144,10 @@ textarea {
   color: inherit;
   font: inherit;
   margin: 0;
-  /* width: 50em,!important; */
 }
 
 button {
   overflow: visible;
-  /* width: 50em,!important; */
 }
 
 button,

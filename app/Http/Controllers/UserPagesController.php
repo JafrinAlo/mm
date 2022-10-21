@@ -9,4 +9,12 @@ class UserPagesController extends Controller
     public function index(){
         return view('user_m.index');
     }
+
+    public function food_request(){
+        return view('user_m.food_request');
+    }
+
+    public function pay_bill(){
+        return view('user_m.pay_bill');
+    }
 }

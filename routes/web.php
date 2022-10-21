@@ -20,3 +20,5 @@ Route::get('/', function () {
 
 // Route::get('/home', [UserPagesController::class,'index']);
 Route::get('/home','App\Http\Controllers\UserPagesController@index');
+Route::get('/food_request','App\Http\Controllers\UserPagesController@food_request');
+Route::get('/pay_bill','App\Http\Controllers\UserPagesController@pay_bill');
