@@ -5,8 +5,8 @@
       </div>
       <ul class="nav navbar-nav">
         <li><a href="/food_request">Order food</a></li>
+        <li><a href="/menu">Menu</a></li>
         <li><a href="/pay_bill">Pay Bill</a></li>
-        
       </ul>
     </div>
   </nav>

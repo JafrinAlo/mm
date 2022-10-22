@@ -14,6 +14,9 @@ class UserPagesController extends Controller
         return view('user_m.food_request');
     }
 
+    public function menu(){
+        return view('user_m.menu.index');
+    }
     public function pay_bill(){
         return view('user_m.pay_bill');
     }

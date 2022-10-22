@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Special;
 
-class FoodRequestsController extends Controller
+class SpecialsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,10 @@ class FoodRequestsController extends Controller
      */
     public function index()
     {
-        //
+        // return Special::all();
+        // return view('user_m.menu.index');
+        $specials=Special::all();
+        return view('user_m.menu.index')->with('specials',$specials);
     }
 
     /**
@@ -46,6 +50,7 @@ class FoodRequestsController extends Controller
     public function show($id)
     {
         //
+        return Special::find($id);
     }
 
     /**
