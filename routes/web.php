@@ -24,13 +24,16 @@ Route::get('/', function () {
 //user pages/////////////////////////////////////////////////////
 Route::get('/dashboard','App\Http\Controllers\UserPagesController@index');
 Route::get('/food_request','App\Http\Controllers\UserPagesController@food_request');
+//menu data selections user
+Route::resource('menu','App\Http\Controllers\MenusController');
+Route::get('/pay_bill','App\Http\Controllers\UserPagesController@pay_bill');
 
 // Route::get('/menu','App\Http\Controllers\UserPagesController@menu');
 
 //menu data selections
 //  Route::get('/menu','App\Http\Controllers\MenusController@index');
 
- Route::resource('menu','App\Http\Controllers\MenusController');
+ 
 // Route::resource('specials','App\Http\Controllers\MenusController');
 // Route::resource('optionals','App\Http\Controllers\MenusController');
 // Route::resource('breakfasts','App\Http\Controllers\MenusController');
@@ -41,4 +44,4 @@ Route::get('/food_request','App\Http\Controllers\UserPagesController@food_reques
 // Route::resource('breakfasts','App\Http\Controllers\BreakfastsController');
 // Route::resource('lunches','App\Http\Controllers\LunchesController');
 
-Route::get('/pay_bill','App\Http\Controllers\UserPagesController@pay_bill');
+

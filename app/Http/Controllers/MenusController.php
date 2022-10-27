@@ -20,8 +20,11 @@ class MenusController extends Controller
         //$specials=Special::all();
         $specials= Special::whereDate('date',date('Y-m-d'))->get();//here date returns current date
         $optionals=Optional::all();
+
+        $breakfasts=Breakfast::all();
+        $lunches=Lunch::all();
         //return view('user_m.menu.index')->with('specials',$specials)->with('optionals',$optionals);
-        return view('user_m.menu.index')->with(compact('specials', 'optionals'));
+        return view('user_m.menu.index')->with(compact('specials', 'optionals','breakfasts','lunches'));
     }
 
     /**

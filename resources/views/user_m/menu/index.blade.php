@@ -43,7 +43,7 @@
 @endif
 <br>
 <br>
-<h3>Regular meal</h3>
+<h3>Breakfast</h3>
     <div class="table">
                    
         <table class="table table-striped">
@@ -51,33 +51,171 @@
             <tr>
               <th>DAY</th>
               <th>BREAKFAST</th>
-              <th>LUNCH</th>
               <th>PRICE</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Sunday</td>
-              <td>Breakfast</td>
-              <td>230</td>
-            </tr>
-            <tr>
+            @if(count($breakfasts)>0)
+              <tr>
+                <td>Sunday</td>
+                  @foreach($breakfasts as $breakfast)
+                    @if($breakfast->day=='sunday')
+                    <tr>
+                      <td></td>
+                      <td>{{$breakfast->item}}</td>
+                      <td>{{$breakfast->price}}</td>
+                    </tr>
+                    @endif
+                  @endforeach
+              </tr>
+
+              <tr>
               <td>Monday</td>
-              <td>Lunch</td>
-              <td>200</td>
-            </tr>
-            <tr>
-              <td>Tuesday</td>
-              <td>Halim</td>
-              <td>300</td>
-            </tr>
-            <tr>
-                <td>Wednesday</td>
-            </tr>
-            <tr>
-                <td>Thursday</td>
-            </tr>
+                @foreach($breakfasts as $breakfast)
+                  @if($breakfast->day=='monday')
+                  <tr>
+                    <td></td>
+                    <td>{{$breakfast->item}}</td>
+                    <td>{{$breakfast->price}}</td>
+                  </tr>
+                  @endif
+                @endforeach
+              </tr>
+              <tr>
+                <td>Tuesday</td>
+                  @foreach($breakfasts as $breakfast)
+                    @if($breakfast->day=='tuesday')
+                    <tr>
+                      <td></td>
+                      <td>{{$breakfast->item}}</td>
+                      <td>{{$breakfast->price}}</td>
+                    </tr>
+                    @else
+                    <td></td>
+                    @endif
+                  @endforeach
+                </tr>
+                <tr>
+                  <td>Wednesday</td>
+                    @foreach($breakfasts as $breakfast)
+                      @if($breakfast->day=='wednesday')
+                      <tr>
+                        <td></td>
+                        <td>{{$breakfast->item}}</td>
+                        <td>{{$breakfast->price}}</td>
+                      </tr>
+                      @else
+                        <td></td>
+                      @endif
+                    @endforeach
+                  </tr>
+                  <tr>
+                    <td>Thursday</td>
+                      @foreach($breakfasts as $breakfast)
+                        @if($breakfast->day=='thursday')
+                        <tr>
+                          <td></td>
+                          <td>{{$breakfast->item}}</td>
+                          <td>{{$breakfast->price}}</td>
+                        </tr>
+                        @else
+                        <td></td>
+                        @endif
+                      @endforeach
+                    </tr>
+           @else
+          <p>No data avaiable</p>
+          @endif
           </tbody>
         </table>
-      </div>    
+      </div>
+
+      <br><br>
+      
+  <h3>Lunch</h3>
+      <div class="table">
+                     
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>DAY</th>
+                <th>Lunch</th>
+                <th>PRICE</th>
+              </tr>
+            </thead>
+            <tbody>
+              @if(count($lunches)>0)
+                <tr>
+                  <td>Sunday</td>
+                    @foreach($lunches as $lunch)
+                      @if($lunch->day=='sunday')
+                      <tr>
+                        <td></td>
+                        <td>{{$lunch->item}}</td>
+                        <td>{{$lunch->price}}</td>
+                      </tr>
+                      @endif
+                    @endforeach
+                </tr>
+  
+                <tr>
+                <td>Monday</td>
+                  @foreach($lunches as $lunch)
+                    @if($breakfast->day=='monday')
+                    <tr>
+                      <td></td>
+                      <td>{{$lunch->item}}</td>
+                      <td>{{$lunch->price}}</td>
+                    </tr>
+                    @endif
+                  @endforeach
+                </tr>
+                <tr>
+                  <td>Tuesday</td>
+                    @foreach($lunches as $lunch)
+                      @if($breakfast->day=='tuesday')
+                      <tr>
+                        <td></td>
+                        <td>{{$lunch->item}}</td>
+                        <td>{{$lunch->price}}</td>
+                      </tr>
+                      @else
+                      <td></td>
+                      @endif
+                    @endforeach
+                  </tr>
+                  <tr>
+                    <td>Wednesday</td>
+                      @foreach($lunches as $lunch)
+                        @if($breakfast->day=='wednesday')
+                        <tr>
+                          <td></td>
+                          <td>{{$lunch->item}}</td>
+                        <td>{{$lunch->price}}</td>
+                        </tr>
+                        @else
+                          <td></td>
+                        @endif
+                      @endforeach
+                    </tr>
+                    <tr>
+                      <td>Thursday</td>
+                        @foreach($lunches as $lunch)
+                          @if($breakfast->day=='thursday')
+                          <tr>
+                            <td></td>
+                            <td>{{$lunch->item}}</td>
+                            <td>{{$lunch->price}}</td>
+                          </tr>
+                          @else
+                          <td></td>
+                          @endif
+                        @endforeach
+                      </tr>
+             @else
+            <p>No data avaiable</p>
+            @endif
+            </tbody>
+          </table>
+        </div> 
 @endsection
