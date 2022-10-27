@@ -18,5 +18,11 @@
         <div id="form_later" style="display:none;">
             @include('user_m.form.form_later')
         </div>
+<br><br><br>
+
+        <label>Date you want to order: </label>
+        <input type="date" id="order_id">
+
+
     </div>
 @endsection

@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Special;
+use App\Models\Optional;
+use App\Models\Breakfast;
+use App\Models\Lunch;
 
 class MenusController extends Controller
 {
@@ -14,11 +17,11 @@ class MenusController extends Controller
      */
     public function index()
     {
-        //
-        // return Special::all();
-        // return view('user_m.menu.index');
-        $specials=Special::all();
-        return view('user_m.menu.index')->with('specials',$specials);
+        //$specials=Special::all();
+        $specials= Special::whereDate('date',date('Y-m-d'))->get();//here date returns current date
+        $optionals=Optional::all();
+        //return view('user_m.menu.index')->with('specials',$specials)->with('optionals',$optionals);
+        return view('user_m.menu.index')->with(compact('specials', 'optionals'));
     }
 
     /**

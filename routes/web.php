@@ -22,16 +22,20 @@ Route::get('/', function () {
 
 
 //user pages/////////////////////////////////////////////////////
-Route::get('/home','App\Http\Controllers\UserPagesController@index');
+Route::get('/dashboard','App\Http\Controllers\UserPagesController@index');
 Route::get('/food_request','App\Http\Controllers\UserPagesController@food_request');
 
-//Route::get('/menu','App\Http\Controllers\UserPagesController@menu');
+// Route::get('/menu','App\Http\Controllers\UserPagesController@menu');
+
 //menu data selections
-Route::resource('menu','App\Http\Controllers\MenusController');
-Route::resource('specials','App\Http\Controllers\MenusController');
-Route::resource('optionals','App\Http\Controllers\MenusController');
-Route::resource('breakfasts','App\Http\Controllers\MenusController');
-Route::resource('lunches','App\Http\Controllers\MenusController');
+//  Route::get('/menu','App\Http\Controllers\MenusController@index');
+
+ Route::resource('menu','App\Http\Controllers\MenusController');
+// Route::resource('specials','App\Http\Controllers\MenusController');
+// Route::resource('optionals','App\Http\Controllers\MenusController');
+// Route::resource('breakfasts','App\Http\Controllers\MenusController');
+// Route::resource('lunches','App\Http\Controllers\MenusController');
+
 // Route::resource('specials','App\Http\Controllers\SpecialsController');
 // Route::resource('optionals','App\Http\Controllers\OptionalsController');
 // Route::resource('breakfasts','App\Http\Controllers\BreakfastsController');

@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('breakfasts', function (Blueprint $table) {
             $table->id();
+            $table->integer('option');
             $table->string('day');
             $table->string('item');
             $table->integer('price');

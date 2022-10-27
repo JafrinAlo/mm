@@ -14,10 +14,11 @@ class SpecialsController extends Controller
      */
     public function index()
     {
-        // return Special::all();
+        //return Special::all();
         // return view('user_m.menu.index');
-        $specials=Special::all();
-        return view('user_m.menu.index')->with('specials',$specials);
+        //$specials= Special::whereDate('date',date('Y-m-d'))->get();//here date returns current date
+        //return view('user_m.menu.index')->with('specials',$specials,);
+        return Special::whereDate('date',date('Y-m-d'))->get();
     }
 
     /**

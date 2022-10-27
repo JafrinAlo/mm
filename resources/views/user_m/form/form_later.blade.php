@@ -2,7 +2,7 @@
     <label for="fname">First name222:</label><br>
     <input type="text" id="fname" name="fname"><br>
     <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname">
+    <input type="date" id="lname" name="lname">
   </form>
 
   <script> 
