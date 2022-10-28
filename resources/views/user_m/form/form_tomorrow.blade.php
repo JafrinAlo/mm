@@ -1,9 +1,10 @@
-<form id="form_tomorrow" >
-    <label for="fname">First name11111:</label><br>
-    <input type="text" id="fname" name="fname"><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname">
-  </form>
+{!! Form::open(['action'=>'App\Http\Controllers\FoodRequestsController@store','method'=>'POST']) !!}
+    
+    <div class='form-group'>
+
+    </div>
+{!! Form::close() !!}
+
 
   <script> 
     function show_form_tomorrow() {

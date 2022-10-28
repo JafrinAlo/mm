@@ -165,7 +165,7 @@
                 <tr>
                 <td>Monday</td>
                   @foreach($lunches as $lunch)
-                    @if($breakfast->day=='monday')
+                    @if($lunch->day=='monday')
                     <tr>
                       <td></td>
                       <td>{{$lunch->item}}</td>
@@ -177,7 +177,7 @@
                 <tr>
                   <td>Tuesday</td>
                     @foreach($lunches as $lunch)
-                      @if($breakfast->day=='tuesday')
+                      @if($lunch->day=='tuesday')
                       <tr>
                         <td></td>
                         <td>{{$lunch->item}}</td>
@@ -191,7 +191,7 @@
                   <tr>
                     <td>Wednesday</td>
                       @foreach($lunches as $lunch)
-                        @if($breakfast->day=='wednesday')
+                        @if($lunch->day=='wednesday')
                         <tr>
                           <td></td>
                           <td>{{$lunch->item}}</td>
@@ -205,7 +205,7 @@
                     <tr>
                       <td>Thursday</td>
                         @foreach($lunches as $lunch)
-                          @if($breakfast->day=='thursday')
+                          @if($lunch->day=='thursday')
                           <tr>
                             <td></td>
                             <td>{{$lunch->item}}</td>
