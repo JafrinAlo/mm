@@ -23,10 +23,20 @@ Route::get('/', function () {
 
 //user pages/////////////////////////////////////////////////////
 Route::get('/dashboard','App\Http\Controllers\UserPagesController@index');
-Route::get('/food_request','App\Http\Controllers\UserPagesController@food_request');
+Route::resource('food_request','App\Http\Controllers\FoodRequestsController');
 //menu data selections user
 Route::resource('menu','App\Http\Controllers\MenusController');
 Route::get('/pay_bill','App\Http\Controllers\UserPagesController@pay_bill');
+
+
+
+
+
+
+
+
+
+
 
 // Route::get('/menu','App\Http\Controllers\UserPagesController@menu');
 

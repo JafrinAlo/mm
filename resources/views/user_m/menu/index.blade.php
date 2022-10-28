@@ -2,6 +2,7 @@
 @section('content')
 <h1>Menu</h1> 
     {{-- special --}}
+    <div class="jumbotron">
     @if(count($specials)>0)
         @foreach($specials as $special)
             <div class="alert alert-success" role="alert">
@@ -12,18 +13,19 @@
     @else
         <p>Sorry!! No special today!</p>
     @endif
-
+<h3>Additionals</h3>
     @if(count($optionals)>0)
-    <div class="table">
+    <div class="table shadow p-3 mb-5 bg-white rounded" style="width: 30%">
                    
-      <table class="table table-striped">
+      <table class="table table-striped table-sm table-hover">
         <thead>
           <tr>
             <th>ADD ONS</th>
             <th>PRICE</th>
           </tr>
+        
         </thead>
-        <tbody>
+        <tbody class="table-hover">
           @foreach($optionals as $optional)
             <tr>
               <td>{{$optional->item}}</td>
@@ -43,8 +45,10 @@
 @endif
 <br>
 <br>
+<div class="row">
+<div class="column" style="float: left; width: 50%;">
 <h3>Breakfast</h3>
-    <div class="table">
+    <div class="table shadow p-3 mb-5 bg-white rounded" style="width: 90%">
                    
         <table class="table table-striped">
           <thead>
@@ -129,17 +133,17 @@
           </tbody>
         </table>
       </div>
+</div>
 
-      <br><br>
-      
+  <div class="column" style="float:left; width:50% ">
   <h3>Lunch</h3>
-      <div class="table">
+      <div class="table" style="width: 90%">
                      
           <table class="table table-striped">
             <thead>
               <tr>
                 <th>DAY</th>
-                <th>Lunch</th>
+                <th>LUNCH</th>
                 <th>PRICE</th>
               </tr>
             </thead>
@@ -217,5 +221,9 @@
             @endif
             </tbody>
           </table>
-        </div> 
+        </div>
+      </div>
+      </div>
+    </div>
+
 @endsection

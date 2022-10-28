@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Special;
+use App\Models\Optional;
+use App\Models\Breakfast;
+use App\Models\Lunch;
 
 class FoodRequestsController extends Controller
 {
@@ -14,6 +18,13 @@ class FoodRequestsController extends Controller
     public function index()
     {
         //
+        $specials= Special::whereDate('date',date('Y-m-d'))->get();//here date returns current date
+        $optionals=Optional::all();
+
+        $breakfasts=Breakfast::all();
+        $lunches=Lunch::all();
+        //return view('user_m.menu.index')->with('specials',$specials)->with('optionals',$optionals);
+        return view('user_m.food_request')->with(compact('specials', 'optionals','breakfasts','lunches'));
     }
 
     /**
