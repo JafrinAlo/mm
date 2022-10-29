@@ -30,7 +30,14 @@ Route::get('/pay_bill','App\Http\Controllers\UserPagesController@pay_bill');
 
 
 
+////admin views////////////////////////
+Route::get('/dashboard_admin', function () {
+    return view('admin_m.index');
+});
 
+Route::get('/confirm_bill', function () {
+    return view('admin_m.confirm_bill');
+});
 
 
 
