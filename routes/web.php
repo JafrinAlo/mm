@@ -1,8 +1,9 @@
 <?php
 
+use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
-
-
+use Inertia\Inertia;
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,6 +43,9 @@ Route::get('/confirm_bill', function () {
 
 
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Auth::routes();
+
 
 
 
@@ -60,5 +64,4 @@ Route::get('/confirm_bill', function () {
 // Route::resource('optionals','App\Http\Controllers\OptionalsController');
 // Route::resource('breakfasts','App\Http\Controllers\BreakfastsController');
 // Route::resource('lunches','App\Http\Controllers\LunchesController');
-
 
