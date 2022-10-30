@@ -4,6 +4,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,13 +33,9 @@ Route::get('/pay_bill','App\Http\Controllers\UserPagesController@pay_bill');
 
 
 ////admin views////////////////////////
-Route::get('/dashboard_admin', function () {
-    return view('admin_m.index');
-});
 
-Route::get('/confirm_bill', function () {
-    return view('admin_m.confirm_bill');
-});
+Route::get('/admin','App\Http\Controllers\AdminPagesController@index');
+Route::get('/confirm_bill','App\Http\Controllers\AdminPagesController@confirm_bill');
 
 
 
@@ -46,22 +43,4 @@ Route::get('/confirm_bill', function () {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes();
 
-
-
-
-// Route::get('/menu','App\Http\Controllers\UserPagesController@menu');
-
-//menu data selections
-//  Route::get('/menu','App\Http\Controllers\MenusController@index');
-
- 
-// Route::resource('specials','App\Http\Controllers\MenusController');
-// Route::resource('optionals','App\Http\Controllers\MenusController');
-// Route::resource('breakfasts','App\Http\Controllers\MenusController');
-// Route::resource('lunches','App\Http\Controllers\MenusController');
-
-// Route::resource('specials','App\Http\Controllers\SpecialsController');
-// Route::resource('optionals','App\Http\Controllers\OptionalsController');
-// Route::resource('breakfasts','App\Http\Controllers\BreakfastsController');
-// Route::resource('lunches','App\Http\Controllers\LunchesController');
 

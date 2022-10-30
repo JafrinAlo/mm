@@ -10,7 +10,21 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
+                        {{-- I add --}}
+                        <div class="row mb-3">
+                            <label for="staffID" class="col-md-4 col-form-label text-md-end">{{ __('Staff ID') }}</label>
 
+                            <div class="col-md-6">
+                                <input id="staffID" type="text" class="form-control @error('staffID') is-invalid @enderror" name="staffID" value="{{ old('staffID') }}" required autocomplete="staffID" autofocus>
+
+                                @error('staffID')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        {{-- I add end --}}
                         <div class="row mb-3">
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
 
@@ -24,7 +38,35 @@
                                 @enderror
                             </div>
                         </div>
+                        {{-- i add --}}
+                        <div class="row mb-3">
+                            <label for="faculty" class="col-md-4 col-form-label text-md-end">{{ __('Faculty') }}</label>
 
+                            <div class="col-md-6">
+                                <input id="faculty" type="text" class="form-control @error('faculty') is-invalid @enderror" name="faculty" value="{{ old('faculty') }}" required autocomplete="faculty" autofocus>
+
+                                @error('faculty')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="department" class="col-md-4 col-form-label text-md-end">{{ __('Department') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="department" type="text" class="form-control @error('department') is-invalid @enderror" name="department" value="{{ old('department') }}" required autocomplete="department" autofocus>
+
+                                @error('department')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        {{-- i end --}}
                         <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 
