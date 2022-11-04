@@ -1,12 +1,18 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Special;
 use App\Models\Optional;
-use App\Models\Breakfast;
-use App\Models\Lunch;
+use App\Models\Food_Req_Breakfast;
+use App\Models\Food_Req_Lunch;
+use App\Models\Food_Req_Optional;
+use App\Models\Food_Req_Special;
+use App\Models\User;
+//use App\Models\Breakfast;
+//use App\Models\Lunch;
+
 
 class FoodRequestsController extends Controller
 {
@@ -37,10 +43,10 @@ class FoodRequestsController extends Controller
         $specials= Special::whereDate('date',date('Y-m-d'))->get();//here date returns current date
         $optionals=Optional::all();
 
-        $breakfasts=Breakfast::all();
-        $lunches=Lunch::all();
+        //$breakfasts=Breakfast::all();
+        //$lunches=Lunch::all();
         //return view('user_m.menu.index')->with('specials',$specials)->with('optionals',$optionals);
-        return view('user_m.food_request')->with(compact('specials', 'optionals','breakfasts','lunches'));
+        return view('user_m.food_request')->with(compact('specials', 'optionals'));
     }
 
     /**
@@ -61,7 +67,42 @@ class FoodRequestsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+    //create request
+    $session_id=Auth::id();
+    $staffID=User::where('id', $session_id)->select('staffid')->pluck('staffid')->first();
+    
+    $breakfasts_req=new Food_Req_Breakfast();
+    $lunches_req=new Food_Req_Lunch();
+    $optionals_req=new Food_Req_Optional();
+    $specials_req=new Food_Req_Special();
+
+    $specials_req->staffid=$staffID;
+    if ($request->input('s_item')!="" && $request->input('no_of_meal')) {
+        $specials_req->special_id=$request->input('s_item');
+        $specials_req->no_of_meal=$request->input('no_of_meal');
+        $specials_req->save();
+        return redirect('/food_request')->with('success','Food Request for TODAY under processing');
+    }
+
+    if ($request->input('o_item')!="") {
+        $optionals_req->staffid=$staffID;
+        $optionals_req->option_id=$request->input('o_item');
+        $optionals_req->save();
+        return redirect('/food_request')->with('success','Food Request for TODAY under processing');
+        }
+    
+    // form store for later
+    // if($request->input('meal_type'=="breakfast" ))
+    // {
+    //     $breakfasts_req->staffid=$staffID;
+    //     $day=$request->input('date')
+    //     $breakfasts_req->day=
+
+    // }
+    else
+        return redirect('/food_request')->with('error','Fill the form properly');
+
+        
     }
 
     /**

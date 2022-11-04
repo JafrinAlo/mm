@@ -21,8 +21,10 @@
 </head>
 <body>
     <div id="app">
-       @include('user_m.inc.navbar');
+       @include('user_m.inc.navbar')
+       @include('user_m.inc.messages')
         <div class="container">
+            {{-- @include('user_m.inc.messages') --}}
         <main class="py-4">
             @yield('content')
         </main>

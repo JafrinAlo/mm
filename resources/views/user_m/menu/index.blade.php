@@ -13,9 +13,10 @@
     @else
         <p>Sorry!! No special today!</p>
     @endif
+    <div class="table shadow p-3 mb-5 bg-white rounded" style="width: 40%">
 <h3>Additionals</h3>
     @if(count($optionals)>0)
-    <div class="table shadow p-3 mb-5 bg-white rounded" style="width: 30%">
+    
                    
       <table class="table table-striped table-sm table-hover">
         <thead>
@@ -47,9 +48,9 @@
 <br>
 <div class="row">
 <div class="column" style="float: left; width: 50%;">
-<h3>Breakfast</h3>
+
     <div class="table shadow p-3 mb-5 bg-white rounded" style="width: 90%">
-                   
+      <h3>Breakfast</h3>         
         <table class="table table-striped">
           <thead>
             <tr>
@@ -135,7 +136,7 @@
       </div>
 </div>
 
-  <div class="column" style="float:left; width:50% ">
+  <div class="table shadow p-3 mb-5 bg-white rounded" style="float:left; width:50% ">
   <h3>Lunch</h3>
       <div class="table" style="width: 90%">
                      

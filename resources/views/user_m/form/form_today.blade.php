@@ -5,8 +5,8 @@
         @if(count($specials)>0)
         {{Form::label('item','Special meal avaiable for today: ')}}
             @foreach($specials as $special)
-                {{Form::checkbox('item', $special->item)}}
-                {{Form::label('item',$special->item)}}
+                {{Form::checkbox('s_item', $special->id)}}
+                {{Form::label('s_item',$special->item)}}
                 <br>
             @endforeach
             {{Form::label('no_of_meal', 'Number of special meals: ')}}{{--no_of_meal is name, Number of item is text --}}
@@ -21,7 +21,7 @@
         {{Form::label('item','Add ons: ')}}
         <br>
             @foreach($optionals as $optional)
-                {{Form::checkbox('item', $optional->id)}}
+                {{Form::checkbox('o_item', $optional->id)}}
                 {{Form::label('item',$optional->item)}}
                 <br>
             @endforeach

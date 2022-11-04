@@ -21,7 +21,7 @@
 </head>
 <body>
     <div id="app">
-       @include('admin_m.inc.navbar');
+       @include('admin_m.inc.navbar')
         <div class="container">
         <main class="py-4">
             @yield('content')

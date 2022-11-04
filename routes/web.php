@@ -28,13 +28,13 @@ Route::get('/dashboard','App\Http\Controllers\UserPagesController@index');
 Route::resource('food_request','App\Http\Controllers\FoodRequestsController');
 //menu data selections user
 Route::resource('menu','App\Http\Controllers\MenusController');
-Route::get('/pay_bill','App\Http\Controllers\UserPagesController@pay_bill');
+Route::get('/pay_bill','App\Http\Controllers\UserPagesController@pay_bill')->name('user');
 
 
 
 ////admin views////////////////////////
 
-Route::get('/admin','App\Http\Controllers\AdminPagesController@index');
+Route::get('/admin','App\Http\Controllers\AdminPagesController@index')->name('admin');
 Route::get('/confirm_bill','App\Http\Controllers\AdminPagesController@confirm_bill');
 
 
