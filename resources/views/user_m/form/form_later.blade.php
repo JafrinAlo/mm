@@ -4,7 +4,7 @@
         <br>
         {{Form::label('date','Which date you want to order: ')}}
         {{-- {{Form::date('date',date('Y-m-d', strtotime('+2 days')),['placeholder'=>"yyyy-mm-dd",'min'=>date('Y-m-d', strtotime('+2 days')),'id'=>'date'])}} --}}
-        {{Form::date('date','',['placeholder'=>"yyyy-mm-dd",'min'=>date('Y-m-d', strtotime('+2 days')),'id'=>'date'])}}
+        {{Form::date('date','',['placeholder'=>"yyyy-mm-dd",'min'=>date('Y-m-d', strtotime('+1 days')),'id'=>'date'])}}
         
         <br>
         {{Form::label('day','Day: ')}}

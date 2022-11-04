@@ -68,8 +68,11 @@ return [
     | ahead and set this to a sensible default for you out of the box.
     |
     */
+    // Default value of timezone is 'UTC', I have changed it to 'Asia/Dhaka'
 
-    'timezone' => 'UTC',
+'timezone'  => 'Asia/Dhaka',
+
+    //'timezone' => 'UTC+6',
 
     /*
     |--------------------------------------------------------------------------

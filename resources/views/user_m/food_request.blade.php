@@ -8,11 +8,11 @@
         <div id="form_today" style="display:none;">{{-- div style none hides div until click --}}
             @include('user_m.form.form_today')
         </div>
-        <br><br>
+        {{-- <br><br>
         <button type="button" onclick="show_form_tomorrow()" class="btn btn-primary btn-lg custom" id="btn-tomorrow">Tomorrow</button>
         <div id="form_tomorrow" style="display:none;">
             @include('user_m.form.form_tomorrow')
-        </div>
+        </div> --}}
         <br><br>
         <button type="button" onclick="show_form_later()" class="btn btn-primary btn-lg custom" id="btn-later">Later</button>
         <div id="form_later" style="display:none;">

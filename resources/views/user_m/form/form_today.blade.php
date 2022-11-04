@@ -12,6 +12,8 @@
             {{Form::label('no_of_meal', 'Number of special meals: ')}}{{--no_of_meal is name, Number of item is text --}}
             {{Form::number('no_of_meal', '')}}
             <br>
+            {{Form::submit('Request Special Meal',['class'=>'btn btn-success'])}}
+            <br>
             @else
             <p>Sorry!! No special meal avaiable today.</p><br>
         @endif
@@ -29,7 +31,7 @@
             <p>Sorry!! no data available in optional.</p>
         @endif
         <br>
-        {{Form::submit('Request',['class'=>'btn btn-success'])}}
+        {{Form::submit('Request Optional items',['class'=>'btn btn-success'])}}
     </div>
 {!! Form::close() !!}
 
