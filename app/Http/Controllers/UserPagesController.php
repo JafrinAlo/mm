@@ -58,12 +58,30 @@ class UserPagesController extends Controller
 
         $optionals_total=$optionals_query->sum('price');
 
+        $breakfasts_query =DB::table('food__req__breakfasts')
+            ->rightjoin('breakfasts', 'food__req__breakfasts.day', '=', 'breakfasts.day')
+            ->select('breakfasts.*','food__req__breakfasts.*')
+            ->where('food__req__breakfasts.staffID','=',$staffID)
+            ->where('food__req__breakfasts.status','=','1');
 
+        $breakfasts_total=$breakfasts_query->sum('price');
 
-            
+        $lunches_query =DB::table('food__req__lunches')
+            ->rightjoin('lunches', 'food__req__lunches.day', '=', 'lunches.day')
+            ->select('lunches.*','food__req__lunches.*')
+            ->where('food__req__lunches.staffID','=',$staffID)
+            ->where('food__req__lunches.status','=','1');
+        $lunches_total=$lunches_query->sum('price');
         
-        $total=$specials_total+$optionals_total;
-            return view('user_m.index')->with(compact('total'));
+        $specials=$specials_query->get();
+        $optionals=$optionals_query->get();
+        $breakfasts=$breakfasts_query->get();
+        $lunches=$lunches_query->get();
+
+        
+        $total=$specials_total+$optionals_total+$breakfasts_total+$lunches_total;
+            return view('user_m.index')->with(compact('total','specials','optionals','breakfasts','lunches'
+        ,'specials_total','breakfasts_total'));
     }
 
     public function food_request(){

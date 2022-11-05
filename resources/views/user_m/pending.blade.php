@@ -93,7 +93,7 @@
         @endif
         <div class="table shadow p-3 mb-5 bg-white rounded" style="width: 50%">
           <h3>Optionals ordered</h3>
-              @if(count($specials_req)>0)
+              @if(count($optionals_req)>0)
               
                              
                 <table class="table table-striped table-sm table-hover">
