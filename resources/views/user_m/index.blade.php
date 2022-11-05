@@ -2,6 +2,7 @@
 @section('content')
 {{-- <h1>Welcome</h1> --}}
 <div class="table">
+  <h2>Your total bill is: {{$total}}</h2>
     <h2>History </h2>
                
     <table class="table table-condensed">
