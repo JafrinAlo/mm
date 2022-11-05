@@ -51,7 +51,7 @@
 
     <div class="table shadow p-3 mb-5 bg-white rounded" style="width: 90%">
       <h3>Breakfast</h3>         
-        <table class="table table-striped">
+        <table class="table table-hovertable-sm table-hover">
           <thead>
             <tr>
               <th>DAY</th>
@@ -62,7 +62,7 @@
           <tbody>
             @if(count($breakfasts)>0)
               <tr>
-                <td>Sunday</td>
+                <th>Sunday</th>
                   @foreach($breakfasts as $breakfast)
                     @if($breakfast->day=='sunday')
                     <tr>
@@ -75,7 +75,7 @@
               </tr>
 
               <tr>
-              <td>Monday</td>
+              <th>Monday</th>
                 @foreach($breakfasts as $breakfast)
                   @if($breakfast->day=='monday')
                   <tr>
@@ -87,7 +87,7 @@
                 @endforeach
               </tr>
               <tr>
-                <td>Tuesday</td>
+                <th>Tuesday</th>
                   @foreach($breakfasts as $breakfast)
                     @if($breakfast->day=='tuesday')
                     <tr>
@@ -101,7 +101,7 @@
                   @endforeach
                 </tr>
                 <tr>
-                  <td>Wednesday</td>
+                  <th>Wednesday</th>
                     @foreach($breakfasts as $breakfast)
                       @if($breakfast->day=='wednesday')
                       <tr>
@@ -115,7 +115,7 @@
                     @endforeach
                   </tr>
                   <tr>
-                    <td>Thursday</td>
+                    <th>Thursday</th>
                       @foreach($breakfasts as $breakfast)
                         @if($breakfast->day=='thursday')
                         <tr>
@@ -140,7 +140,7 @@
   <h3>Lunch</h3>
       <div class="table" style="width: 90%">
                      
-          <table class="table table-striped">
+          <table class="table table-hover table-sm ">
             <thead>
               <tr>
                 <th>DAY</th>
@@ -151,7 +151,7 @@
             <tbody>
               @if(count($lunches)>0)
                 <tr>
-                  <td>Sunday</td>
+                  <th>Sunday</th>
                     @foreach($lunches as $lunch)
                       @if($lunch->day=='sunday')
                       <tr>
@@ -164,7 +164,7 @@
                 </tr>
   
                 <tr>
-                <td>Monday</td>
+                <th>Monday</th>
                   @foreach($lunches as $lunch)
                     @if($lunch->day=='monday')
                     <tr>
@@ -176,7 +176,7 @@
                   @endforeach
                 </tr>
                 <tr>
-                  <td>Tuesday</td>
+                  <th>Tuesday</th>
                     @foreach($lunches as $lunch)
                       @if($lunch->day=='tuesday')
                       <tr>
@@ -190,7 +190,7 @@
                     @endforeach
                   </tr>
                   <tr>
-                    <td>Wednesday</td>
+                    <th>Wednesday</th>
                       @foreach($lunches as $lunch)
                         @if($lunch->day=='wednesday')
                         <tr>
@@ -204,7 +204,7 @@
                       @endforeach
                     </tr>
                     <tr>
-                      <td>Thursday</td>
+                      <th>Thursday</th>
                         @foreach($lunches as $lunch)
                           @if($lunch->day=='thursday')
                           <tr>

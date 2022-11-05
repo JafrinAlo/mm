@@ -35,16 +35,16 @@
   <script> 
     // for date to day
     document.getElementById("date").addEventListener("change", myFunction);
-function myFunction(){
-const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-let date=document.getElementById("date").value;
+    function myFunction(){
+        const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+        let date=document.getElementById("date").value;
 
-const d = new Date(date);
-let day = weekday[d.getDay()];
+        const d = new Date(date);
+        let day = weekday[d.getDay()];
 
-var var_day=document.getElementById("day");
-var_day.value=day;
-}
+        var var_day=document.getElementById("day");
+        var_day.value=day;
+        }
 
 
     //form

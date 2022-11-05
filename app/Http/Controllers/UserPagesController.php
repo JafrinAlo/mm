@@ -2,6 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+
+use App\Models\Food_Req_Breakfast;
+use App\Models\Food_Req_Lunch;
+use App\Models\Food_Req_Optional;
+use App\Models\Food_Req_Special;
+
+use App\Models\Special;
+use App\Models\Optional;
+
+use App\Models\User;
+
+use App\Models\Breakfast;
+use App\Models\Lunch;
+
 use Illuminate\Http\Request;
 
 class UserPagesController extends Controller

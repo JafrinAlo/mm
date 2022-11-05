@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('staffID');
             $table->string('day');
             $table->date('order_date');
+            $table->boolean('status')->default('0');
             $table->timestamps();
         });
     }

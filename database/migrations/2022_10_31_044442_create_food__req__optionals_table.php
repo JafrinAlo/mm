@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->integer('staffID');
             $table->integer('option_id');
+            $table->boolean('status')->default('0');
             $table->timestamps();
         });
     }

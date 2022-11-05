@@ -46,6 +46,9 @@
                 <li class="nav-item">
                   <a class="nav-link" href="/pay_bill">{{ __('Pay Bill') }}</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/pending">{{ __('Pending requests') }}</a>
+                </li>
                 @endguest
               </ul>
               

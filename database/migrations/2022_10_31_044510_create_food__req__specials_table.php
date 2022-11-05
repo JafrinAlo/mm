@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('staffID');
             $table->integer('special_id');
             $table->integer('no_of_meal');
+            $table->boolean('status')->default('0');
             $table->timestamps();
         });
     }

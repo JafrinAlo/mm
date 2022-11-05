@@ -26,6 +26,8 @@ Route::get('/', function () {
 //user pages/////////////////////////////////////////////////////
 Route::get('/dashboard','App\Http\Controllers\UserPagesController@index');
 Route::resource('food_request','App\Http\Controllers\FoodRequestsController');
+Route::resource('pending','App\Http\Controllers\UserFoodRequestsController');
+
 //menu data selections user
 Route::resource('menu','App\Http\Controllers\MenusController');
 Route::get('/pay_bill','App\Http\Controllers\UserPagesController@pay_bill')->name('user');
