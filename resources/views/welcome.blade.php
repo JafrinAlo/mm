@@ -1,10 +1,9 @@
 @extends('layouts.app')
 @section('content')
-<h1>WELCOME</h1>
-<br><br>
-<H2>Laravel based project</H2>
-<br>
-<h2>Mess Management</h2>
+<div align="center"><br><br><br><br>
+    <h1><p style="font-family:verdana">Officers' Mess Management System</p></h1>
+    <h3><p style="font-family:'Courier New'">Bangaldesh University Of Professionals</p> </h3>
+    </div>
 @endsection
             
             

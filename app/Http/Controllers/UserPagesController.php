@@ -81,7 +81,7 @@ class UserPagesController extends Controller
         
         $total=$specials_total+$optionals_total+$breakfasts_total+$lunches_total;
             return view('user_m.index')->with(compact('total','specials','optionals','breakfasts','lunches'
-        ,'specials_total','breakfasts_total'));
+        ,'specials_total','optionals_total','breakfasts_total','lunches_total'));
     }
 
     public function food_request(){

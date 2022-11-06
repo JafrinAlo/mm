@@ -29,11 +29,12 @@
               @endforeach
             </tbody>
           </table>
+          @else
+          <p>Looks like you didnt order anything for breakfast</p>
+      @endif
         </div>
              
-    @else
-        <p>Looks like you didnt order anything for breakfast</p>
-    @endif
+  
   
   
     
@@ -41,7 +42,7 @@
   
   
   <div class="table shadow p-3 mb-5 bg-white rounded" style="width: 50%">
-  <h3>Lunches Bill</h3>
+  <h3>Lunches Bill: {{$lunches_total}}</h3>
       @if(count($lunches)>0)
       
                      
@@ -64,13 +65,14 @@
             @endforeach
           </tbody>
         </table>
+        @else
+        <p>Sorry!! data not loaded</p>
+    @endif
       </div>
            
-  @else
-      <p>Sorry!! data not loaded</p>
-  @endif
+ 
       <div class="table shadow p-3 mb-5 bg-white rounded" style="width: 50%">
-          <h3>Specials Bill</h3>
+          <h3>Specials Bill {{$specials_total}}</h3>
               @if(count($specials)>0)
       
                 <table class="table table-striped table-sm table-hover">
@@ -92,13 +94,14 @@
                     @endforeach
                   </tbody>
                 </table>
+                @else
+                <p>Sorry!! data not loaded</p>
+            @endif
               </div>
                    
-          @else
-              <p>Sorry!! data not loaded</p>
-          @endif
+         
           <div class="table shadow p-3 mb-5 bg-white rounded" style="width: 50%">
-            <h3>Optionals Bill</h3>
+            <h3>Optionals Bill: {{$optionals_total}}</h3>
                 @if(count($specials)>0)
                 
                                
@@ -121,10 +124,11 @@
                       @endforeach
                     </tbody>
                   </table>
-                </div>
-                     
-            @else
+                  @else
                 <p>Sorry!! data not loaded</p>
             @endif
+                </div>
+                     
+            
 
 @endsection

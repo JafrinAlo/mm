@@ -24,11 +24,12 @@
             @endforeach
           </tbody>
         </table>
+        @else
+        <p>Sorry!! data not loaded</p>
+    @endif
       </div>
            
-  @else
-      <p>Sorry!! data not loaded</p>
-  @endif
+ 
 
 
   
@@ -57,11 +58,13 @@
           @endforeach
         </tbody>
       </table>
+      
+      @else
+      <p>Sorry!! data not loaded</p>
+  @endif
     </div>
          
-@else
-    <p>Sorry!! data not loaded</p>
-@endif
+
     <div class="table shadow p-3 mb-5 bg-white rounded" style="width: 50%">
         <h3>Specials ordered</h3>
             @if(count($specials_req)>0)
@@ -86,11 +89,12 @@
                   @endforeach
                 </tbody>
               </table>
-            </div>
-                 
-        @else
+              @else
             <p>Sorry!! data not loaded</p>
         @endif
+            </div>
+                 
+        
         <div class="table shadow p-3 mb-5 bg-white rounded" style="width: 50%">
           <h3>Optionals ordered</h3>
               @if(count($optionals_req)>0)
@@ -113,10 +117,11 @@
                     @endforeach
                   </tbody>
                 </table>
-              </div>
-                   
-          @else
+                @else
               <p>Sorry!! data not loaded</p>
           @endif
+              </div>
+                   
+          
         
 @endsection

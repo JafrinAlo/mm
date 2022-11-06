@@ -37,10 +37,7 @@ Route::get('/pay_bill','App\Http\Controllers\UserPagesController@pay_bill')->nam
 ////admin views////////////////////////
 
 Route::get('/admin','App\Http\Controllers\AdminPagesController@index')->name('admin');
-Route::get('/confirm_bill','App\Http\Controllers\AdminPagesController@confirm_bill');
-
-
-
+Route::resource('confirm_bill','App\Http\Controllers\BillConfirmController');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes();
